@@ -7,8 +7,12 @@ Pneumothorax is the medical term used for a collapsed lung. This medical conditi
 Pneumothorax is usually diagnosed by a radiologist on a chest x-ray, and can sometimes be very difficult to confirm. An accurate AI algorithm to detect pneumothorax would be useful in a lot of clinical scenarios. AI could be used to triage chest radiographs for priority interpretation, or to provide a more confident diagnosis for non-radiologists.
 
 In this project we present a Computed Aided Diagnosis(CAD) system to classify and if present, segment pneumothorax from a set of chest radiographic images. This problem can be solved by breaking the problem down into smaller subproblems, then these smaller subproblems can be solved easily by relating them to other problems that have been studied in great detail in other domains.
-The task undertaken in this project can be broken down into 2 subproblems. Given a high resolution posterior-anterior chest X-ray image as an input, the algorithm needs to correctly classify the presence of pneumothorax. This sub-problem can be seen as a binary supervised learning problem. 
-The second sub-problem relies upon the first sub-problem. Given a high resolution posterior-anterior chest X-ray image with at least one instance of visible pneumothorax as input, the algorithm needs to correctly segment the pneumothorax(ces). This problem can be seen as a semantic image segmentation problem.
+
+First, the lung boundary is detected from the given image. This is done using a Fully Convolutional Model which is based on the U-Net architecture. Next, the lung region is cropped out and sent for classification. We have proposed two approaches for classification, the first approach uses features extracted from Local Binary Patterns(LBP) and classifies using a Support Vector Machine(SVM). 
+
+Next, pneumothorax segmentation is performed by a modified U-Net architecture. U-Net architecture have already been used in biomedical imaging.
+
+We achieve state-of-the-art results in classification and segmentation making our model quite robust and accurate. Our complete classification and segmentation pipeline is very efficient and can be easily deployed if required.
 
 ## Dataset
 
@@ -52,4 +56,5 @@ train_augment = Compose([
 ])
 ```
 
+The above augmentations are applied to dataset as:
 <img src="images/pneumothorax.png" >
