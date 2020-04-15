@@ -58,3 +58,7 @@ train_augment = Compose([
 
 The above augmentations are applied to dataset as:
 <img src="images/pneumothorax.png" >
+
+## License
+
+This repository is licensed under the terms of the MIT license.
