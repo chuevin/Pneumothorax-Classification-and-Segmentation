@@ -59,6 +59,25 @@ train_augment = Compose([
 The above augmentations are applied to dataset as:
 <img src="images/pneumothorax.png" >
 
+## Results Table
+
+The following table shows performance of different ML models on binary classification task:
+
+| Architecture | Classification Accuracy |
+| --------------- | --------------- |
+| DenseNet 169 | **91.23%** |
+| ResNet50 | 86.52% |
+| SVM without Lung Segmentation | 54.79% |
+| SVM with Lung Segmentation | 78.20% |
+
+The following table shows performance of different Unet-based models on metrics such as IoU and Dice Coefficent:
+
+| Architecture | Model IoU | Model Dice Coefficient |
+| --------------- | --------------- | --------------- |
+| SE-ResNeXt50UNet | 0.7877 | 0.8223 |
+| XceptionUNet | 0.7629 | 0.8157 |
+| EfficientNetUNet | **0.8106** | **0.8420** |
+
 ## License
 
 This repository is licensed under the terms of the MIT license.
