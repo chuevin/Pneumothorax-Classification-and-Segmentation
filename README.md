@@ -8,7 +8,7 @@ Pneumothorax is usually diagnosed by a radiologist on a chest x-ray, and can som
 
 In this project we present a Computed Aided Diagnosis(CAD) system to classify and if present, segment pneumothorax from a set of chest radiographic images. This problem can be solved by breaking the problem down into smaller subproblems, then these smaller subproblems can be solved easily by relating them to other problems that have been studied in great detail in other domains.
 
-First, the lung boundary is detected from the given image. This is done using a Fully Convolutional Model which is based on the U-Net architecture. Next, the lung region is cropped out and sent for classification. We have proposed two approaches for classification, the first approach uses features extracted from Local Binary Patterns(LBP) and classifies using a Support Vector Machine(SVM). 
+First, the lung boundary is detected from the given image. This is done using a Fully Convolutional Model which is based on the U-Net architecture. Next, the lung region is cropped out and sent for classification. We have proposed two approaches for classification, the first approach uses features extracted from Uniform Local Binary Patterns(ULBP) and classifies using a Support Vector Machine(SVM). 
 
 Next, pneumothorax segmentation is performed by a modified U-Net architecture. U-Net architecture have already been used in biomedical imaging.
 
@@ -67,13 +67,14 @@ The following table shows performance of different ML models on binary classific
 | --------------- | --------------- |
 | DenseNet 169 | **91.23%** |
 | ResNet50 | 86.52% |
-| SVM without Lung Segmentation | 54.79% |
-| SVM with Lung Segmentation | 78.20% |
+| ULBP + SVM without Lung Segmentation | 54.79% |
+| ULBP + SVM with Lung Segmentation | 78.20% |
 
 The following table shows performance of different Unet-based models on metrics such as IoU and Dice Coefficent:
 
 | Architecture | Model IoU | Model Dice Coefficient |
 | --------------- | --------------- | --------------- |
+| SE-ResNet34Unet | 0.7566 | 0.7737 |
 | SE-ResNeXt50UNet | 0.7877 | 0.8223 |
 | XceptionUNet | 0.7629 | 0.8157 |
 | EfficientNetUNet | **0.8106** | **0.8420** |
