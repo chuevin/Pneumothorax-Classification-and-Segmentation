@@ -10,7 +10,11 @@ In this project we present a Computed Aided Diagnosis(CAD) system to classify an
 
 First, the lung boundary is detected from the given image. This is done using a Fully Convolutional Model which is based on the U-Net architecture. Next, the lung region is cropped out and sent for classification. We have proposed two approaches for classification, the first approach uses features extracted from Uniform Local Binary Patterns(ULBP) and classifies using a Support Vector Machine(SVM). 
 
+<img src="images/lung_segmentation.png" >
+
 Next, pneumothorax segmentation is performed by a modified U-Net architecture. U-Net architecture have already been used in biomedical imaging.
+
+<img src="images/pneumo_seg.png" >
 
 We achieve state-of-the-art results in classification and segmentation making our model quite robust and accurate. Our complete classification and segmentation pipeline is very efficient and can be easily deployed if required.
 
