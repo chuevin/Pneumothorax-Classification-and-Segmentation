@@ -23,6 +23,7 @@ We achieve state-of-the-art results in classification and segmentation making ou
 For experimentation,  the dataset is taken from [Kaggle](https://www.kaggle.com/c/siim-acr-pneumothorax-segmentation/overview), the dataset has over 13,000  Chest X-ray RGB images in Digital Imaging and Communications in Medicine (DICOM) format. DICOM is the standard for the communication and management of medical imaging information and related data. DICOM is most commonly used for storing and transmitting medical images enabling the integration of medical imaging devices such as scanners, servers, workstations, printers, network hardware, and picture archiving and communication systems (PACS) from multiple manufacturers. It has been widely adopted by hospitals and is making inroads into smaller applications like dentists' and doctors' offices.
 The dimension of the image in the dataset is 1024x1024.
 
+<img src="images/pneumo_data.png" >
 
 <img src="images/dataset_imgs.png" >
 
