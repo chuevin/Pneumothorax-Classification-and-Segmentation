@@ -40,6 +40,12 @@ The dimension of the image in the dataset is 1024x1024.
 * opencv-python (3.4.2)
 * pydicom (1.4.2)
 
+## Preprocessing
+
+We have used Contrast Limited Adaptive Histogram Equalization (CLAHE). AHE has a tendency to disproportionately amplifies the  noise in relatively homogeneous regions of an image. This problem is solved by CLAHE which prevents this by limiting the amplification.
+
+<img src="images/pneumo_clahe.png" >
+
 ## Augmentations
 
 Used Albumentations library for image augmentation
