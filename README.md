@@ -90,6 +90,11 @@ The following table shows performance of different Unet-based models on metrics 
 | XceptionUNet | 0.7629 | 0.8157 |
 | EfficientNetUNet | **0.8106** | **0.8420** |
 
+## Plots
+
+<img src="images/efficient_plot.png" >
+      EfficientNet IoU and Loss Curve
+
 ## License
 
 This repository is licensed under the terms of the MIT license.
